@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .showChat {
+        width: 80%;
+        padding: 20px;
+        border: none;
+        text-align: right;
+        margin: 20px auto;
+        background-color: wheat;
+        border-radius: 10px;
+      }
+      .showChat li {
+        list-style: none;
+        margin: 15px 0;
+        font-size: 14px;
+      }
+      #chatBox {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: flex-end;
+        width: 80%;
+        height: 40px;
+        padding: 5px 10px;
+        border: none;
+        background-color: rgb(141, 215, 228);
+        margin: 10px auto;
+        border-radius: 10px;
+      }
+      #chatText {
+        width: calc(100% - 90px);
+        height: 30px;
+        text-align: right;
+        margin-right: 10px;
+        padding: 0 10px;
+        border: none;
+        background-color: transparent;
+        color: #000;
+      }
+      #chatText:focus {
+        border: none;
+      }
+      button {
+        width: 80px;
+        height: 30px;
+        background-color: orange;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="chatBox">
+      <label for="chatText"></label>
+      <input
+        type="text"
+        id="chatText"
+        placeholder="내용을 입력해주세요"
+        required
+      />
+      <button type="submit" id="submitBtn">보내기</button>
+    </form>
+    <ul class="showChat"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
